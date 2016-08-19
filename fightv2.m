@@ -9,15 +9,15 @@ d=2;
 
 pay = char(zeros(size(pairs)));
 
-r = rand;
+
 [imax,jmax] = size(pairs);
 for i=1:imax
     for j = 1:jmax
         if pairs(i,j)==3
-            switch r;
-                    case r < p 
+            r = rand;
+            if r<p
                         pairs(i,j) = 1;
-                    otherwise
+            else
                         pairs(i,j) = 2;
             end
         end
